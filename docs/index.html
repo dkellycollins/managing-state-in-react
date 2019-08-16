@@ -20,7 +20,7 @@
 </style>
 
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="BY23M1AW9q0FxhXQD/SrYEXYBOpcilP1N9dw7q7gChOr2rrmfIcB+MwC0BeFKj8TIX0aRiC7PAXlLKe7ZGfzhg==" />
+<meta name="csrf-token" content="HqvWOXjY4Y7Qa/L3KDCITAgLPeSbOs4MBAx6EqaKuLiw/NvsVEkW2xmvNzCi7hw/bK4jSOcLofzW961HbA1BLQ==" />
 		<style id="user-css-output" type="text/css"></style>
 	</head>
 	<body>
@@ -35,9 +35,11 @@
 
 <div class="sl-block" data-block-type="text" data-block-id="db52f950cd11c73465649d13be13deb8" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 560px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <p>Senior Software Engineer</p>
-</div></div></section><section data-id="99749e1d8cd9ae78a66fab3086bd2c11"><div class="sl-block" data-block-type="image" data-block-id="df26cedeeab1a915a78570c310b27933" style="min-width: 4px; min-height: 4px; width: 806px; height: 400px; left: 77px; top: 150px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1196" data-natural-height="593" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/792018/images/6444489/Artisan_Technology_Group_Logo.png"></div></div></section></section><section class="stack" data-id="bc8effc19a6d7b5ed0f59c45a21017cd"><section data-id="212aaa03e0cc732b4f4c3abbc511ef57"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="b8da8391a18fd5657198a3d654c4552f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div></section><section data-id="99749e1d8cd9ae78a66fab3086bd2c11"><div class="sl-block" data-block-type="image" data-block-id="df26cedeeab1a915a78570c310b27933" style="min-width: 4px; min-height: 4px; width: 806px; height: 400px; left: 77px; top: 150px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1196" data-natural-height="593" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/792018/images/6444489/Artisan_Technology_Group_Logo.png"></div></div></section><section data-id="e9f87d4c8708a5e288909e3fe1d09b8b"><div class="sl-block" data-block-type="text" style="width: 803px; left: 77px; top: 205px; height: auto;" data-block-id="708ce5c5d2dcfbce8bff3539f3994d22"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>What is the "right" way to manage state?</h1>
+</div></div></section></section><section class="stack" data-id="bc8effc19a6d7b5ed0f59c45a21017cd"><section data-id="212aaa03e0cc732b4f4c3abbc511ef57"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="b8da8391a18fd5657198a3d654c4552f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Component State</h1>
-</div></div></section><section data-id="1f9e75763267b1bf60da100210624e8e"><div class="sl-block" data-block-type="code" data-block-id="2033f469edd3103904923731de641feb" style="min-width: 30px; min-height: 30px; width: 777px; height: 290px; left: 92px; top: 205px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="">class Hello extends React.Component {
+</div></div></section><section data-id="1f9e75763267b1bf60da100210624e8e"><div class="sl-block" data-block-type="code" data-block-id="2033f469edd3103904923731de641feb" style="min-width: 30px; min-height: 30px; width: 697px; height: 485px; left: 132px; top: 108px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11; font-size: 150%;"><pre class="javascript"><code data-line-numbers="">class Hello extends React.Component {
   state = { };
 
   componentDidMount() {
@@ -46,22 +48,29 @@
 
   render() {
     return (
-      &lt;div&gt;Hello {this.props.name}. Today is {this.state.date.toString()}&lt;/div&gt;
+      &lt;div&gt;
+        Hello {this.props.name}. 
+        Today is {this.state.date.toString()}
+      &lt;/div&gt;
     );
   }
 }</code></pre></div></div>
-<div class="sl-block" data-block-type="text" data-block-id="897259903bf63a1991127240eb8a924b" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 591px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<div class="sl-block" data-block-type="text" data-block-id="897259903bf63a1991127240eb8a924b" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 611px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
 <p>Or...</p>
-</div></div></section><section data-id="2c428d41d31817b10de93ae4928344c0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="69658b8351642ad38aa8daaf1d86e34f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
-<h2>React Hooks</h2>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 280px; height: auto;" data-block-id="a27585c01b7c06275aafefd64ab79189"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; line-height: 1.95;" data-has-line-height="" dir="ui">
-<ul>
-	<li>Manage state in function components</li>
-	<li>Introduced in React v16.8</li>
-	<li>Opt-in, no breaking changes</li>
-</ul>
-</div></div></section><section data-id="9eee012bd3a7d04116984376c249bb42"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="efb894866b94992ab55352db4edd5389"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</div></div></section><section data-id="2c428d41d31817b10de93ae4928344c0"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="69658b8351642ad38aa8daaf1d86e34f">
+    <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+        <h2>React Hooks</h2>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 280px; height: auto;" data-block-id="a27585c01b7c06275aafefd64ab79189">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; line-height: 1.95;" data-has-line-height="" dir="ui">
+        <ul>
+            <li>Manage state in function components</li>
+            <li>Introduced in React v16.8</li>
+            <li>Opt-in, no breaking changes</li>
+        </ul>
+    </div>
+</div></section><section data-id="9eee012bd3a7d04116984376c249bb42"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="efb894866b94992ab55352db4edd5389"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>useState</h2>
 </div></div>
 <div class="sl-block" data-block-type="text" data-block-id="cb552de865d7263973a0d5e9ab2aabb3" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 40px; top: 263px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.95;" data-has-line-height="">
@@ -75,10 +84,10 @@
 <div class="sl-block" data-block-type="text" data-block-id="ea4856a1e3902ab065b6dfcaea0b45a4" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 661px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <p><a href="https://reactjs.org/docs/hooks-state.html" target="_blank">https://reactjs.org/docs/hooks-state.html</a></p>
 </div></div>
-<div class="sl-block" data-block-type="code" data-block-id="f9dcfafdf9ed839939d110e17b617c05" style="min-width: 30px; min-height: 30px; width: 490px; height: 34px; left: 235px; top: 543px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 14;"><pre class="javascript"><code data-line-numbers="">const [state, setState] = useState(initialState);</code></pre></div></div></section><section data-id="a4d8c4050507770474816a9278796da3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="404b0154ec3c45195903a367d41d31aa"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<div class="sl-block" data-block-type="code" data-block-id="f9dcfafdf9ed839939d110e17b617c05" style="min-width: 30px; min-height: 30px; width: 679px; height: 44px; left: 141px; top: 538px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 14; font-size: 150%;"><pre class="javascript"><code>const [state, setState] = useState(initialState);</code></pre></div></div></section><section data-id="a4d8c4050507770474816a9278796da3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="404b0154ec3c45195903a367d41d31aa"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>useEffect</h2>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 40px; top: 263px;" data-block-id="cb810c6060775874312fdc160201870a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.95;" data-has-line-height="">
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 40px; top: 210px;" data-block-id="cb810c6060775874312fdc160201870a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.95;" data-has-line-height="">
 <ul>
 	<li>Can be used to replace lifecycle hooks</li>
 	<li>Runs a method when data changes</li>
@@ -88,13 +97,27 @@
 <div class="sl-block" data-block-type="text" data-block-id="d8ac1f9c5309b1d5ca930098b25be0c9" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 661px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <p><a href="https://reactjs.org/docs/hooks-effect.html" target="_blank">https://reactjs.org/docs/hooks-effect.html</a></p>
 </div></div>
-<div class="sl-block" data-block-type="code" data-block-id="6c98ced3b16bb627fd4e4d5de259d6aa" style="min-width: 30px; min-height: 30px; width: 391px; height: 155px; left: 285px; top: 483px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 15;"><pre class="javascript"><code data-line-numbers="">useEffect(() =&gt; {
+<div class="sl-block" data-block-type="code" data-block-id="6c98ced3b16bb627fd4e4d5de259d6aa" style="min-width: 30px; min-height: 30px; width: 537px; height: 225px; left: 212px; top: 420px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 15; font-size: 150%;"><pre class="javascript"><code data-line-numbers="">useEffect(() =&gt; {
   console.log('Component Mounted');
 }, []);
 
 useEffect(() =&gt; {
   loadData(key);
-}, [key]);</code></pre></div></div></section><section data-id="436de8abcffa3d4291279ce05628fd25"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="5b64a7d0fdd02686ed30cc3ef352088d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+}, [key]);</code></pre></div></div></section><section data-id="25aaff7e179aa36c549cdbfbe5969dfd"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="93d5fd78fa3ef6f68ac2a91d1c2a5a2e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>And More!</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="bb8e0eb229aff867032f57cfb9f26fe6" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.95;" data-has-line-height="">
+<ul>
+	<li>useCallback</li>
+	<li>useMemo</li>
+	<li>useRef</li>
+	<li class="fragment" data-fragment-index="0">useReducer</li>
+	<li class="fragment" data-fragment-index="1">useContext</li>
+	<li class="fragment" data-fragment-index="2">useImperativeHandle</li>
+	<li class="fragment" data-fragment-index="3">useLayoutEffect</li>
+</ul>
+</div></div>
+</section><section data-id="436de8abcffa3d4291279ce05628fd25"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="5b64a7d0fdd02686ed30cc3ef352088d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Rules for Hooks</h2>
 </div></div>
 <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 227px; height: auto;" data-block-id="9f702ca84ea297ef4d2e15fb8ae56e7f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.95;" data-has-line-height="">
@@ -110,17 +133,26 @@ useEffect(() =&gt; {
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 647px;" data-block-id="d5bc694bfaf5de4dbe7c8d23b9a155f9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <p><a href="https://reactjs.org/docs/hooks-rules.html" target="_blank">https://reactjs.org/docs/hooks-rules.html</a></p>
-</div></div></section><section data-id="d119fa64a0f6723896abc7598c1f1e7a"><div class="sl-block" data-block-type="code" data-block-id="fa6f54c9a1690388e8a0b2f94934fa76" style="min-width: 30px; min-height: 30px; width: 800px; height: 229px; left: 80px; top: 236px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="">export function Hello(props) {
-    const [date, setDate] = useState(null);
+</div></div></section><section data-id="d119fa64a0f6723896abc7598c1f1e7a"><div class="sl-block" data-block-type="code" data-block-id="fa6f54c9a1690388e8a0b2f94934fa76" style="min-width: 30px; min-height: 30px; width: 960px; height: 340px; left: 0px; top: 179px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11; font-size: 150%;"><pre class="javascript"><code data-line-numbers="">export function Hello(props) {
+  const [date, setDate] = useState(null);
 
-    useEffect(() =&gt; {
-        setDate(new Date());
-    }, []);
+  useEffect(() =&gt; {
+    setDate(new Date());
+  }, []);
 
-    return (
-        &lt;div&gt;Hello {props.name}. Today is {date.toString()}&lt;/div&gt;
-    );
-}</code></pre></div></div></section><section data-id="39ece3e815ad041cb309466655cec082"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="2e5ade2f9e039ea64920d44dfd5ffbd0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+  return (
+    &lt;div&gt;Hello {props.name}. Today is {date.toString()}&lt;/div&gt;
+  );
+}</code></pre></div></div></section><section data-id="17292d5fc9c2c4b1b5592f4f177d1c3a"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="77290309bd8341b7ab94dd76b0142ba9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Shared State</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 263px; height: auto;" data-block-id="71cd8f38a97ea8c71d1529fecce9f64b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.95;" data-has-line-height="">
+<ul>
+	<li>"Lifting state up"</li>
+	<li>Higher order components</li>
+	<li>Render Props </li>
+</ul>
+</div></div></section><section data-id="39ece3e815ad041cb309466655cec082"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="2e5ade2f9e039ea64920d44dfd5ffbd0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Render Props</h2>
 </div></div>
 
@@ -147,23 +179,20 @@ function App(props) {
       {date =&gt; &lt;HelloWorld name="Dave" date={date} /&gt;}
     &lt;/CurrentDate&gt;
   );
-}</code></pre></div></div></section><section data-id="dc987d838c5dfeaa6c00c0c3a47f99e1"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="dce34a1befc98849a0fd7465a3af5c9f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
-<h2>When to use?</h2>
+}</code></pre></div></div></section><section data-id="dc987d838c5dfeaa6c00c0c3a47f99e1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="dce34a1befc98849a0fd7465a3af5c9f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>The "right" way?</h2>
 </div></div>
-<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 502px; height: auto;" data-block-id="abb668ee6d2eaf464c4fdc53de73300f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<div class="sl-block" data-block-type="text" style="width: 881px; left: 40px; top: 263px; height: auto;" data-block-id="abb668ee6d2eaf464c4fdc53de73300f"><div class="sl-block-style" style="z-index: 12; transform: rotate(360deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.95;" data-has-line-height="">
 <ul>
-	<li class="fragment" data-fragment-index="2">Can run into issues with prop drilling</li>
-	<li class="fragment" data-fragment-index="3">Shared state can become complex</li>
+	<li>Not quite...</li>
+	<li>Can run into issues with prop drilling</li>
+	<li>Shared state can become complex and hard to manage</li>
 </ul>
-</div></div>
-<div class="sl-block" data-block-type="text" data-block-id="1cef9fc8f5c936341892c5e416b3d490" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 280px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="0">
-<p>Always!</p>
-</div></div>
-<div class="sl-block" data-block-type="text" data-block-id="c57566376466f8178d0be54fe2547551" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 331px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="1">
-<p>Just kidding...</p>
-</div></div></section></section><section class="stack" data-id="4f913b8bd77521654521853966a83881"><section data-id="1e08bbe827c5a8e09d47b77c5722433f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="6d5cecac869e6d0483878d8d49157c29"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div></div>
+
+</section></section><section class="stack" data-id="4f913b8bd77521654521853966a83881"><section data-id="1e08bbe827c5a8e09d47b77c5722433f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="6d5cecac869e6d0483878d8d49157c29"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Context</h1>
-</div></div></section><section data-id="a5d2340cea742e07e9d1072794680adf"><div class="sl-block" data-block-type="code" data-block-id="00a8995b6091b56a33f56d76f0e79ab2" style="min-width: 30px; min-height: 30px; width: 601px; height: 406px; left: 181px; top: 154px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="">const AuthContext = React.createContext({ username: null });
+</div></div></section><section data-id="a5d2340cea742e07e9d1072794680adf"><div class="sl-block" data-block-type="code" data-block-id="00a8995b6091b56a33f56d76f0e79ab2" style="min-width: 30px; min-height: 30px; width: 879px; height: 553px; left: 41px; top: 74px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11; font-size: 150%;"><pre class="javascript"><code data-line-numbers="">const AuthContext = React.createContext({ username: null });
 const AuthContextProvider = AuthContext.Provider;
 
 function Profile(props) {
@@ -174,15 +203,26 @@ function Profile(props) {
 }
 
 function App() {
-  const [auth, setAuth] = useState({ usename: 'JohnDoe' });
+  const [auth, setAuth] = useState({ username: 'JohnDoe' });
   return (
     &lt;AuthContextProvider value={auth}&gt;
       &lt;Profile /&gt;
     &lt;/AuthContextProvider&gt;
   );
-}
+}</code></pre></div></div></section><section data-id="f1d474d6fb8e174c68979aea9b10bddf"><div class="sl-block" data-block-type="code" data-block-id="89cc93478d96e49893b34535741591c0" style="min-width: 30px; min-height: 30px; width: 870px; height: 472px; left: 45px; top: 114px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12; font-size: 150%;"><pre class="javascript"><code data-line-numbers="">const AuthStateContext = React.createContext();
+const AuthDispatchContext = React.createContext();
 
-ReactDOM.render(&lt;App /&gt;, document.findElementById('root'));</code></pre></div></div></section><section data-id="b1cb949d4466fd4a5b8c2b5c13ff489f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="cf1c3e006a4c6f8b13f50201d5674474"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+function AuthProvider(props) {
+  const [auth, setAuth] = useState(null);
+  const dispatch = () =&gt; setAuth({ username: 'JohnDoe' });
+  return (
+    &lt;AuthStateContext.Provider value={auth}&gt;
+      &lt;AuthDispatchContext.Provider value={dispatch}&gt;
+        {props.children}
+      &lt;/AuthDispatchContext.Provider&gt;
+    &lt;/AuthStateContext.Provider&gt;
+  );
+}</code></pre></div></div></section><section data-id="b1cb949d4466fd4a5b8c2b5c13ff489f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="cf1c3e006a4c6f8b13f50201d5674474"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>When to use Context</h2>
 </div></div>
 <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 234px; height: auto;" data-block-id="54108ec4e2708fb39addcf754d350088"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.95;" data-has-line-height="">
@@ -197,7 +237,47 @@ ReactDOM.render(&lt;App /&gt;, document.findElementById('root'));</code></pre></
 <p><a href="https://reactjs.org/docs/context.html#when-to-use-context" target="_blank">https://reactjs.org/docs/context.html#when-to-use-context</a></p>
 </div></div></section></section><section class="stack" data-id="6d1afc799e1b11aaba226d87e07c34f4"><section data-id="b6a0134836439254694b0dddbf20ffba"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="873b5a93dad96e357abd5a4b0876b9df"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Redux</h1>
-</div></div></section><section data-id="68a5afaf3ad0db123d2851ff39e3c054"><div class="sl-block" data-block-type="code" data-block-id="7a3e14a72649d924d68cee50dca70516" style="min-width: 30px; min-height: 30px; width: 757px; height: 700px; left: 102px; top: 0px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="">//reducer
+</div></div></section><section data-id="6e71b34d6973078bdf777f947ff51d37"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="806bf4a993ff4e275f82773aeabbb430"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Actions</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a99223173964f8d20f67efe949c815c0" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.95;" data-has-line-height="">
+<ul>
+	<li>Type - Static string used to identifiy the action. Every thing else is optional</li>
+	<li>Payload - The data of the action. Generally used by the reducer</li>
+	<li>Error - Indicates if the action is an error</li>
+	<li>Meta - Additional information on the action.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="fd0376071f2f2b6792d8c8c60e485595" style="min-width: 30px; min-height: 30px; width: 611px; height: 51px; left: 175px; top: 605px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13; font-size: 150%;"><pre class="javascript"><code>const action = { type: 'Update Timestamp' };</code></pre></div></div></section><section data-id="f6bceb8090fe394d089d2bf023e191ae"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="12af677f14efaec2e1c62a2e4e772559"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Reducers</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3f99c11d539c96fd097c6466b8435764" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 81px; top: 188px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.95;" data-has-line-height="">
+<ul>
+	<li>Accepts the previous state and action to return the new action</li>
+	<li>Multiple reducers can be combined into a single reducer with combineReducers</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="2c4d2983080a163680879ddc410250e5" style="min-width: 30px; min-height: 30px; width: 769px; height: 257px; left: 96px; top: 443px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13; font-size: 150%;"><pre class="javascript"><code data-line-numbers="">function rootReducer(state = {}, action) {
+  switch(action.type) {
+    case 'Update Timestamp': 
+      return { ...state, timestamp: action.payload };
+    default: 
+      return state;
+  }
+}</code></pre></div></div></section><section data-id="d7ba64a7b98ea97a12a07c7b10030a58"><div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 71px; height: auto;" data-block-id="013d39ec4eb066cffbd9676bd60a6960"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Selectors</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="da5cb660a9e10acf175ed457a79539fa" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 234px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.95;" data-has-line-height="">
+<ul>
+	<li>Function that accepts state and can return computed values.</li>
+	<li>Not always used, but a good way to get information from state.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="722ff5834d5bcd93b5c291321daf6cb2" style="min-width: 30px; min-height: 30px; width: 511px; height: 170px; left: 225px; top: 490px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13; font-size: 150%;"><pre class="javascript"><code data-line-numbers="">function selectTimestamp(state) {
+  return state.timestamp
+    ? state.timestamp.toString()
+    : 'Unknown';
+}</code></pre></div></div></section><section data-id="68a5afaf3ad0db123d2851ff39e3c054"><div class="sl-block" data-block-type="code" data-block-id="7a3e14a72649d924d68cee50dca70516" style="min-width: 30px; min-height: 30px; width: 757px; height: 700px; left: 102px; top: 0px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="">//reducer
 function rootReducer(state, action) {
   switch(action.type) {
     case 'Update Timestamp': return { ...state, timestamp: action.payload }
@@ -232,7 +312,23 @@ ReactDOM.render(
     &lt;TimestampDisplay /&gt;
   &lt;/Provider&gt;,
   document.getElementById('root')
-);</code></pre></div></div></section><section data-id="4e570719660f176e0e7a4f6ef19e5007"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="dc45911280a2b9234512f8d4ef5fbaad"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+);</code></pre></div></div></section><section data-id="ac4786939bbc3a1fc7e2d6ddd1cdd658"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="d838443e6daf4f7bce3545eec57e0018"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Middleware</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="1bfd0d0ad1417740a958da809f4bdc46" style="min-width: 30px; min-height: 30px; width: 501px; height: 266px; left: 230px; top: 427px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12; font-size: 150%;"><pre class="javascript"><code data-line-numbers="">const loggerMiddleware =
+  ({ dispatch, getState }) =&gt;
+  (next) =&gt;
+  (action) =&gt; {
+    const result = next(action);
+    console.log(action);
+    return result;
+  };</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="cd55f0e009456e3dbbf798564745d937" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 222px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; line-height: 1.95;" data-has-line-height="">
+<ul>
+	<li>Can intercept actions to modify how they are handled or dispatch additional actions.</li>
+	<li>Provides the ability to customize redux in many ways</li>
+</ul>
+</div></div></section><section data-id="4e570719660f176e0e7a4f6ef19e5007"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="dc45911280a2b9234512f8d4ef5fbaad"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
 <h2>Redux</h2>
 </div></div>
 <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 263px; height: auto;" data-block-id="21d7e5ce9461e37d27cfcd3f76ef46b7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.95;" dir="ui" data-has-line-height="">
@@ -263,23 +359,25 @@ ReactDOM.render(
 	<li>Does introduce more boilerplate</li>
 	<li>Adds indirection to state management</li>
 </ul>
+</div></div></section><section data-id="58a1faac9be4908def9f8efe81bcd884"><div class="sl-block" data-block-type="text" style="width: 803px; left: 77px; top: 205px; height: auto;" data-block-id="fb2508353204e35e002fa1e6318f94b7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>What is the "right" way to manage state?</h1>
 </div></div></section></section><section class="stack" data-id="8fd3cb73442adfe94ee654e33172c8d3"><section data-id="7a93406f1b6581729b5cbbf356c95dd3"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="b46250f8b41621e51502f4f7b3b67947"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
 <h1>Custom Hooks</h1>
-</div></div></section><section data-id="be6ceaf657357590d0bc5db93d896f61"><div class="sl-block" data-block-type="code" data-block-id="23f6adcbc5a94842a892d6f1ab12a32a" style="min-width: 30px; min-height: 30px; width: 490px; height: 30px; left: 235px; top: 545px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="">const [count, increment, decrement] = useCounter()</code></pre></div></div>
+</div></div></section><section data-id="be6ceaf657357590d0bc5db93d896f61"><div class="sl-block" data-block-type="code" data-block-id="23f6adcbc5a94842a892d6f1ab12a32a" style="min-width: 30px; min-height: 30px; width: 698px; height: 52px; left: 131px; top: 534px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11; font-size: 150%;"><pre class="javascript"><code>const [count, increment, decrement] = useCounter()</code></pre></div></div>
 <div class="sl-block" data-block-type="text" data-block-id="a8ead1f6c0dc0a0c57a2af54c0330a2a" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 263px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; line-height: 1.95;" data-has-line-height="">
 <ul>
 	<li>A custom hook is any function that uses hooks.</li>
 	<li>They follow the same rules as hooks</li>
 	<li>Generally prefixed with "use"</li>
 </ul>
-</div></div></section><section data-id="8a03bd9ddf85faacf1b7015a91099f8d"><div class="sl-block" data-block-type="code" data-block-id="e236d51bbe66b14652d0ce21a3b996b4" style="min-width: 30px; min-height: 30px; width: 560px; height: 166px; left: 200px; top: 267px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="">function useCounter() {
-    const [count, setCount] = useState();
-    return [
-      count, 
-      () =&gt; setCount(count + 1), 
-      () =&gt; setCount(count - 1)
-    ];
-}</code></pre></div></div></section><section data-id="dcb9fe9d63d2070d626b6dc8274e4193"><div class="sl-block" data-block-type="code" data-block-id="dfe3e2dcbadee27f475363edb184f51f" style="min-width: 30px; min-height: 30px; width: 441px; height: 482px; left: 260px; top: 109px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre class="javascript"><code data-line-numbers="">//reducer
+</div></div></section><section data-id="8a03bd9ddf85faacf1b7015a91099f8d"><div class="sl-block" data-block-type="code" data-block-id="e236d51bbe66b14652d0ce21a3b996b4" style="min-width: 30px; min-height: 30px; width: 592px; height: 267px; left: 184px; top: 217px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11; font-size: 150%;"><pre class="javascript"><code data-line-numbers="">function useCounter() {
+  const [count, setCount] = useState();
+  return [
+    count, 
+    () =&gt; setCount(count + 1), 
+    () =&gt; setCount(count - 1)
+  ];
+}</code></pre></div></div></section><section data-id="dcb9fe9d63d2070d626b6dc8274e4193"><div class="sl-block" data-block-type="code" data-block-id="dfe3e2dcbadee27f475363edb184f51f" style="min-width: 30px; min-height: 30px; width: 656px; height: 669px; left: 152px; top: 16px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11; font-size: 150%;"><pre class="javascript"><code data-line-numbers="">//reducer
 function count(state = 0, action) {
   switch(action.type) {
     case 'increment': return state + 1;
@@ -289,9 +387,7 @@ function count(state = 0, action) {
 }
 
 //selector
-function selectCount(state) {
-  return state.count;
-}
+const selectCount = (state) =&gt; state.count;
 
 function useCount() {
   const count = useSelector(selectCount);
@@ -302,22 +398,45 @@ function useCount() {
     () =&gt; dispatch({ type: 'increment' }), 
     () =&gt; dispatch({ type: 'decrement' })
   ];
-}</code></pre></div></div></section><section data-id="8c283acde083113d161f00d3d9bbe19f"><div class="sl-block" data-block-type="text" data-block-id="17e5d244811c09ebfab02039e741844a" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 253px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.95;" data-has-line-height="">
+}</code></pre></div></div></section><section data-id="8c283acde083113d161f00d3d9bbe19f"><div class="sl-block" data-block-type="text" data-block-id="17e5d244811c09ebfab02039e741844a" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 263px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.95;" data-has-line-height="">
 <ul>
-	<li>Hooks allow us to define application state independent of components</li>
+	<li>Separates your state from your components</li>
 	<li>Be expressive with your state</li>
 	<li>Use the approach that makes sense for that <em>state</em>
 </li>
 </ul>
-</div></div></section></section><section class="stack" data-id="2def662b9a7ca1ef9f0156bb2b3d6d77"><section data-id="447e6dcb16ef903b342ddc0979e90ad1"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="63e84d0d6df0bf424a181576d8732d87"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="314a15a7f58c2a93c7be09c3bdd4ce68" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Why custom hooks?</h2>
+</div></div></section><section data-id="3c6356b960e6eff9e608956afdfad3d4"><div class="sl-block" data-block-type="text" style="width: 883px; left: 39px; top: 118px; height: auto;" data-block-id="014330ba41540d3289d50cc7d8f2cd0a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.95;" data-has-line-height="" dir="ui"><ul>
+<li>If state is not shared, use component state</li>
+<li>Context can be used for shared state that is used by many components, but not updated often</li>
+<li>Redux can be used for shared complex state</li>
+<li>Create hooks to manage shared state to simplify your components</li>
+</ul></div></div></section></section><section class="stack" data-id="2def662b9a7ca1ef9f0156bb2b3d6d77"><section data-id="e5dce227865044429b8e5ba354955b12"><div class="sl-block" data-block-type="text" style="width: 803px; left: 77px; top: 70px; height: auto;" data-block-id="0b1a1c2237eb6b80844adf5799eb2cca"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Resources</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 144px; height: auto;" data-block-id="1ced07d684f79b5682fa65510e0b3969"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; line-height: 1.95;" data-has-line-height="">
+<ul>
+	<li><a href="https://reactjs.org/docs/getting-started.html" target="_blank">https://reactjs.org/docs/getting-started.html</a></li>
+	<li><a href="https://redux.js.org/introduction/getting-started" target="_blank">https://redux.js.org/introduction/getting-started</a></li>
+	<li><a href="https://www.youtube.com/watch?v=dpw9EHDh2bM" target="_blank">https://www.youtube.com/watch?v=dpw9EHDh2bM</a></li>
+	<li><a href="https://kentcdodds.com/blog/application-state-management-with-react" target="_blank">https://kentcdodds.com/blog/application-state-management-with-react</a></li>
+	<li><a href="https://kentcdodds.com/blog/how-to-use-react-context-effectively" target="_blank">https://kentcdodds.com/blog/how-to-use-react-context-effectively</a></li>
+	<li><a href="https://blog.logrocket.com/why-use-redux-reasons-with-clear-examples-d21bffd5835/" target="_blank">https://blog.logrocket.com/why-use-redux-reasons-with-clear-examples-d21bffd5835/</a></li>
+</ul>
+</div></div></section><section data-id="447e6dcb16ef903b342ddc0979e90ad1"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="63e84d0d6df0bf424a181576d8732d87"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <h1>Thank you!</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="9d7478fed2658500eed3448bbb26cb57" style="height: auto; min-width: 30px; min-height: 30px; width: 803px; left: 77px; top: 471px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><a href="https://dkellycollins.github.io/managing-state-in-react/#/" target="_blank">https://dkellycollins.github.io/managing-state-in-react/#/</a></p>
 </div></div></section><section data-id="15dc54b7ba52cdee3f662323cb8f49a1"><div class="sl-block" data-block-type="image" data-block-id="a30cbc20cba6a93530906c206eacc876" style="min-width: 4px; min-height: 4px; width: 806px; height: 386px; left: 77px; top: 157px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1743" data-natural-height="834" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/792018/images/6443851/SpeakerEvaluationGraphic.PNG"></div></div></section></section>
 			</div>
 		</div>
 
 		
 <script>
-	var SLConfig = {"current_user":{"id":792018,"username":"devinkelly-collins","name":"Devin Kelly-Collins","description":null,"thumbnail_url":"https://lh4.googleusercontent.com/-KAT3dBTU1BI/AAAAAAAAAAI/AAAAAAAAAq4/iW0p7nkorkQ/photo.jpg?sz=50","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":643263,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null,"editor_grid":true,"editor_grid_on_top":false,"editor_snap":true,"editor_fixed_notes":true,"developer_mode":true,"speaker_layout":null,"speaker_theme":null,"phone_number":null,"phone_country_code":null,"media_sources":null,"export_controls":null,"export_slide_number":null,"export_slide_notes":null,"export_separate_fragments":null},"email":"dkellycollins@gmail.com","notify_on_receipt":true,"billing_address":null,"billing_vat_id":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":null,"storage_used":606249,"storage_limit":262144000},"deck":{"id":1571263,"slug":"deck-6","title":"Managing State in React","description":"","width":960,"height":700,"visibility":"all","published_at":"2019-08-03T23:12:41.363Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/59ff5c7f428b66acd67e5c7348f814a4/thumb.jpg?1565896645","view_count":3,"user":{"id":792018,"username":"devinkelly-collins","name":"Devin Kelly-Collins","description":null,"thumbnail_url":"https://lh4.googleusercontent.com/-KAT3dBTU1BI/AAAAAAAAAAI/AAAAAAAAAq4/iW0p7nkorkQ/photo.jpg?sz=50","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":643263,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"silver-green","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":32,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":null,"data_updated_at":1565896716305,"font_typekit":null,"font_google":null,"time_limit":null,"upsizing_enabled":null,"notes":{"39ece3e815ad041cb309466655cec082":"- But how do we share state between components with component state?\n- \"Lift state up\"\n- Render Props is a reusable way to \"Lift state up\"\n- Higher Order Components is another pattern that can be used to \"Lift state up\"","436de8abcffa3d4291279ce05628fd25":"","9eee012bd3a7d04116984376c249bb42":"","2c428d41d31817b10de93ae4928344c0":"- Hooks allow us to manage state in a re-usable way","d119fa64a0f6723896abc7598c1f1e7a":"","1f9e75763267b1bf60da100210624e8e":"- Break component down, focusing on how state is used.","1e08bbe827c5a8e09d47b77c5722433f":"","b6a0134836439254694b0dddbf20ffba":"- Redux is not the only framework that provides ways to manage your state, but it is a popular one.","4e570719660f176e0e7a4f6ef19e5007":"- The biggest benefit Redux provides is separating your view from your state. \n- It allows you to build and test how your state will change, without worrying about how it will be displayed.","68a5afaf3ad0db123d2851ff39e3c054":"","04978f241e5192cc069e5a0b7111d6a5":"- Before we go any further, let's define \"complex\" state.\n- There is no actual definition for \"complex\", here are a few things I look for to determine if state is \"complex\"\n  - If state can be changed by multiple components\n  - If state is used by multiple (3+) components. This makes the state complex because you are depending on that state in multiple areas of your application.\n  - If there are relationships or dependencies in your state. Meaning that if one part of your state changes another part is expected to change.","0084c82bda6d56a8b21f99a29caa2601":"- Again, Redux helps in managing and simplifying complex state in applications.\n- Also Redux-devtools and the available packages that extend Redux are amazing and may be a reason to use it even in simpler applications.\n- However the indirection of making changes to state can be hard to grasp. Using a framework like Redux is a decision that should be discussed and agreed on by the whole team.\n\n- So we have covered Component state, context, and Redux. Which one is the \"right\" approach?\n- Likely a mix of all of them. All of these approaches are just tools for you to use in your application. \n- However, I do have a suggestion to simplify your state regardless of the approach you use...","03f66f379773f708c17d5208be3dbb3e":"","212aaa03e0cc732b4f4c3abbc511ef57":"","a4d8c4050507770474816a9278796da3":"","dc987d838c5dfeaa6c00c0c3a47f99e1":"- So when do we want to use Component state? Always! Right?\n- While you will probably need to use component state within your application, there are issues if that is the only way you manage state in your application.","a5d2340cea742e07e9d1072794680adf":"","b1cb949d4466fd4a5b8c2b5c13ff489f":"- Generally you should use create only a few context's within your app. If it is overused it can make your application difficult to follow and maintain.\n- A great use-case for context is information that does not change often, such as Session or Theme info.\n\n- So with component state and context, we should have everything we need to manage state in our applications, right?\n- Yes! However for some application \"complex\" state, this may not be enough and they may need to pull in...","3024570f98a1ceb6cf21687634984018":"","7a93406f1b6581729b5cbbf356c95dd3":"- One more way to manage state is by writing custom hooks for your application.","447e6dcb16ef903b342ddc0979e90ad1":"","e3bbedc5decbd7759c9994c02f449937":"","99749e1d8cd9ae78a66fab3086bd2c11":"- Artisan; \n  - We partner with companies in the Kansas City area\n  - We start engagements by understanding the company's business and how technology can help them achive their goals.\n  - This means that no two projects we work on are the same and often use different stacks or frameworks.\n\n- Been at Artisan for 5 years, Senior Engineer\n- Working with Artisan has given me the chance to work with lots of tech on multiple projects.\n- Learned front-end with AngularJS\n- Recently have been working with React\n- Love the functional approach React takes with components ","be6ceaf657357590d0bc5db93d896f61":"- There is not much to writing a custom hook. These are function that use hooks internally.\n- Let's use this hook as an example.\n- How is it implemented?","8a03bd9ddf85faacf1b7015a91099f8d":"- We can implement this hook using \"useState\"...","dcb9fe9d63d2070d626b6dc8274e4193":"- Or we can implement this hook with Redux hooks.\n- Both implementations have the same contract, so the component doesn't know.","8c283acde083113d161f00d3d9bbe19f":"- React provides basic hooks\n- Many packages provide hooks that provide a bit more functionality, like working with Observables or Local Storage.\n- But I encourage to go beyond those concepts and create hooks specific to your application.","15dc54b7ba52cdee3f662323cb8f49a1":"- Just a reminder, I would greatly any feedback you may have for me."}},"user":{"id":792018,"username":"devinkelly-collins","name":"Devin Kelly-Collins","description":null,"thumbnail_url":"https://lh4.googleusercontent.com/-KAT3dBTU1BI/AAAAAAAAAAI/AAAAAAAAAq4/iW0p7nkorkQ/photo.jpg?sz=50","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":643263,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}}};
+	var SLConfig = {"current_user":{"id":792018,"username":"devinkelly-collins","name":"Devin Kelly-Collins","description":null,"thumbnail_url":"https://lh4.googleusercontent.com/-KAT3dBTU1BI/AAAAAAAAAAI/AAAAAAAAAq4/iW0p7nkorkQ/photo.jpg?sz=50","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":643263,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null,"editor_grid":true,"editor_grid_on_top":false,"editor_snap":true,"editor_fixed_notes":true,"developer_mode":true,"speaker_layout":null,"speaker_theme":null,"phone_number":null,"phone_country_code":null,"media_sources":null,"export_controls":null,"export_slide_number":null,"export_slide_notes":null,"export_separate_fragments":null},"email":"dkellycollins@gmail.com","notify_on_receipt":true,"billing_address":null,"billing_vat_id":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":null,"storage_used":606249,"storage_limit":262144000},"deck":{"id":1571263,"slug":"deck-6","title":"Managing State in React","description":"","width":960,"height":700,"visibility":"all","published_at":"2019-08-03T23:12:41.363Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/59ff5c7f428b66acd67e5c7348f814a4/thumb.jpg?1565896645","view_count":3,"user":{"id":792018,"username":"devinkelly-collins","name":"Devin Kelly-Collins","description":null,"thumbnail_url":"https://lh4.googleusercontent.com/-KAT3dBTU1BI/AAAAAAAAAAI/AAAAAAAAAq4/iW0p7nkorkQ/photo.jpg?sz=50","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":643263,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"silver-green","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":43,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":null,"data_updated_at":1565972534443,"font_typekit":null,"font_google":null,"time_limit":null,"upsizing_enabled":null,"notes":{"39ece3e815ad041cb309466655cec082":"- But how do we share state between components with component state?\n- \"Lift state up\"\n- Render Props is a reusable way to \"Lift state up\"\n- Higher Order Components is another pattern that can be used to \"Lift state up\"","436de8abcffa3d4291279ce05628fd25":"","9eee012bd3a7d04116984376c249bb42":"","2c428d41d31817b10de93ae4928344c0":"- Hooks allow us to manage state in a re-usable way","d119fa64a0f6723896abc7598c1f1e7a":"","1f9e75763267b1bf60da100210624e8e":"- Break component down, focusing on how state is used.","1e08bbe827c5a8e09d47b77c5722433f":"- Context is another state management api provided by React for \"global\" state.","b6a0134836439254694b0dddbf20ffba":"- Redux is not the only framework that provides ways to manage your state, but it is a popular one.","4e570719660f176e0e7a4f6ef19e5007":"- The biggest benefit Redux provides is separating your view from your state. \n- It allows you to build and test how your state will change, without worrying about how it will be displayed.","68a5afaf3ad0db123d2851ff39e3c054":"","04978f241e5192cc069e5a0b7111d6a5":"- Before we go any further, let's define \"complex\" state.\n- There is no actual definition for \"complex\", here are a few things I look for to determine if state is \"complex\"\n  - If state can be changed by multiple components\n  - If state is used by multiple (3+) components. This makes the state complex because you are depending on that state in multiple areas of your application.\n  - If there are relationships or dependencies in your state. Meaning that if one part of your state changes another part is expected to change.","0084c82bda6d56a8b21f99a29caa2601":"- Again, Redux helps in managing and simplifying complex state in applications.\n- Also Redux-devtools and the available packages that extend Redux are amazing and may be a reason to use it even in simpler applications.\n- However the indirection of making changes to state can be hard to grasp. Using a framework like Redux is a decision that should be discussed and agreed on by the whole team.","03f66f379773f708c17d5208be3dbb3e":"","212aaa03e0cc732b4f4c3abbc511ef57":"- Let's start with component state","a4d8c4050507770474816a9278796da3":"- useEffect can be used to replace lifecycle methods on a class component.\n- However a better way to use useEffect is to react to specific data changing.","dc987d838c5dfeaa6c00c0c3a47f99e1":"- So when do we want to use Component state? Always! Right?\n- While you will probably need to use component state within your application, there are issues if that is the only way you manage state in your application.","a5d2340cea742e07e9d1072794680adf":"","b1cb949d4466fd4a5b8c2b5c13ff489f":"- Generally you should use create only a few context's within your app. If it is overused it can make your application difficult to follow and maintain.\n- A great use-case for context is information that does not change often, such as Session or Theme info.\n\n- So with component state and context, we should have everything we need to manage state in our applications, right?\n- Yes! However for some application \"complex\" state, this may not be enough and they may need to pull in...","3024570f98a1ceb6cf21687634984018":"","7a93406f1b6581729b5cbbf356c95dd3":"- One more way to manage state is by writing custom hooks for your application.","447e6dcb16ef903b342ddc0979e90ad1":"","e3bbedc5decbd7759c9994c02f449937":"","99749e1d8cd9ae78a66fab3086bd2c11":"- Artisan; \n  - We partner with companies in the Kansas City area\n  - We start engagements by understanding the company's business and how technology can help them achive their goals.\n  - This means that no two projects we work on are the same and often use different stacks or frameworks.\n\n- Been at Artisan for 5 years, Senior Engineer\n- Working with Artisan has given me the chance to work with lots of tech on multiple projects.\n- Learned front-end with AngularJS\n- Recently have been working with React\n- Love the functional approach React takes with components ","be6ceaf657357590d0bc5db93d896f61":"- There is not much to writing a custom hook. These are function that use hooks internally.\n- Let's use this hook as an example.\n- How is it implemented?","8a03bd9ddf85faacf1b7015a91099f8d":"- We can implement this hook using \"useState\"...","dcb9fe9d63d2070d626b6dc8274e4193":"- Or we can implement this hook with Redux hooks.\n- Both implementations have the same contract, so the component doesn't know.","8c283acde083113d161f00d3d9bbe19f":"- React provides basic hooks\n- Many packages provide hooks that provide a bit more functionality, like working with Observables or Local Storage.\n- But I encourage to go beyond those concepts and create hooks specific to your application.","15dc54b7ba52cdee3f662323cb8f49a1":"- Just a reminder, I would greatly any feedback you may have for me.","6e71b34d6973078bdf777f947ff51d37":"- Actions describe intent to modify state.\n- Generally actions can be mapped to actions users will be taking in your application.\n- Type: Indicates the ","f6bceb8090fe394d089d2bf023e191ae":"","d7ba64a7b98ea97a12a07c7b10030a58":"","ac4786939bbc3a1fc7e2d6ddd1cdd658":"- Middleware is were side effects can be managed\n- This is were api calls are generally handled\n- Many middleware packages out there, Thunk, ","25aaff7e179aa36c549cdbfbe5969dfd":"","17292d5fc9c2c4b1b5592f4f177d1c3a":"","58a1faac9be4908def9f8efe81bcd884":"- So we have covered Component state, context, and Redux. Which one is the \"right\" approach?\n- Likely a mix of all of them. All of these approaches are just tools for you to use in your application and the \"right\" approach will change depending on the state in your application\n- However, there is an approach that I believe helps you manage your state regardless.","e9f87d4c8708a5e288909e3fe1d09b8b":"- As I started learning React, one question I ran into was how should I manage state within my application.\n- I found that there are multiple ways to handle this in React, with no clear single approach.\n- So I started digging to find the answer. I wanted to take you through what I have learned and what I determined the \"right\" way to manage state was.","44adf4f625c28ebe3a4261866d361c32":"","3c6356b960e6eff9e608956afdfad3d4":"","e5dce227865044429b8e5ba354955b12":"- React and Redux docs are great. Really impressed with how upfront they are about certain features.\n- Be sure to checkout the keynote from React conf in 2018 where hooks were introduced. They do a fantasic job at describing in depth what issues hooks solve and how you can rewrite components to use hooks.\n- Kent Dodds has great articles in general, but these articles do a great job at describing ways to manage state with just react.\n- Finally, if you search \"Why should I use Redux\" you'll get dozens of results, this article is one I liked to describe the benefits of Redux.","f1d474d6fb8e174c68979aea9b10bddf":"- So how do we allow updates to context?\n","343d48ec865d6f7c435ea2620fb6c2c4":""}},"user":{"id":792018,"username":"devinkelly-collins","name":"Devin Kelly-Collins","description":null,"thumbnail_url":"https://lh4.googleusercontent.com/-KAT3dBTU1BI/AAAAAAAAAAI/AAAAAAAAAq4/iW0p7nkorkQ/photo.jpg?sz=50","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":643263,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}}};
 </script>
 
 		<script>
